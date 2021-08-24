@@ -7,11 +7,11 @@
     
 }
 html {
-    box-sizing: border-box; /*para que el borde, margen no afecte el tamaño d elos elementos*/
-    font-size: 62.5%;  /* 1rem= 10px**/
+    box-sizing: border-box; 
+    font-size: 62.5%;  
 }
 *, *:before, *:after {
-    box-sizing: inherit; /*hereda del padre osea el html*/
+    box-sizing: inherit; 
 }
 body {
     box-sizing: border-box;
@@ -140,4 +140,9 @@ h3 {
     /* color: var(--main-color); */
     margin-bottom: 2rem;
     padding: 1rem;
+}
+@media only screen and (min-width: 480px) {
+    .container {
+        width: 85%;
+    }
 }
