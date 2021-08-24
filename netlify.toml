@@ -1,4 +1,4 @@
-[start]
+[build]
     command = "npm run start"
     base = "/"
 
