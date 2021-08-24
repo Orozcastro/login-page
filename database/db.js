@@ -2,11 +2,11 @@ const mysql = require('mysql2');
 
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'admin',
+    host: 'mysql-46449-0.cloudclusters.net',
+    user: 'admin',
+    password: 'Loremafer22',
     database: process.env.DB_DATABASE,
-    port: 3306
+    port: 19835
 });
 
 // connection.query(
