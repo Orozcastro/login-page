@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='resources/css/styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <% if(login) { %>
+        <header class="header">
+            <a href="logout">Logout</a>
+        </header>
+        <div class="welcome">
+            <i class="w3-xxlarge fa fa-users icon" style="font-size: 8rem"></i>
+            <h1>WELCOME! </h1>
+            <h2>
+                <%= name %>
+            </h2>
+        </div>
+    <%} else { %>
+        <div class="container" >
+            <h3><%= name %></h3>
+            <a class="toLogin btn" href="login" >Go to Login</a>
+        </div>
+    <% } %>
+</body>
+</html>

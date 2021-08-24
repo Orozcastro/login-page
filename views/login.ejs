@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='resources/css/styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <!-- <img src="../public/user-solid.svg" alt=""> -->
+
+    <div class="login container">
+        <h2>Sign in</h2>
+        <i class="w3-xxlarge fa fa-user icon" style="font-size: 8rem"></i>
+        <form class="login-form" action="auth" method="POST">
+            <div>
+                <p class="user-label" >User</p>
+                <input class="user-input" type="text" name="user" id="user" placeholder="User" required>
+            </div>
+            <div>
+                <p class="user-label" >Password</p>
+                <input class="pass-input" type="password" name="pass" id="pass" placeholder="******" required>
+            </div>
+            <input class="btn" type="submit"  value="LOGIN">
+        </form>
+        <p class="new-account">Don't have account? 
+            <a href="register" class="register"> REGISTER HERE </a>
+        </p>
+        
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined") {%>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                // showConfirmButton: '<%= showConfirmButton %>',
+                timer: '<%= timer %>'
+            })
+            .then(()=> {
+                window.location= '/<%= ruta %>'
+            })
+        </script>
+    <% } %>
+</body>
+</html>

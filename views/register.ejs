@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='resources/css/styles.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <script src='main.js'></script> -->
+</head>
+
+
+<body>
+    <div class="register-form container">
+        <h2>Registration</h2>
+        <i class="w3-xxlarge fa fa-user-circle icon" style="font-size: 8rem"></i>
+
+        <form class="login-form" action="/register" method="POST">
+            <p class="user-label" for="user">User name</p>
+            <input class="user-input" type="text" name="user" required>
+
+            <p class="user-label" for="">Full name</p>
+            <input class="user-input" type="text" name="name" required>
+
+            <p class="pass-label" for="">Password</p>
+            <input class="pass-input" type="password" name="pass" required>
+
+            <input class="btn" type="submit" value="Save">
+            <a href="/" class="btn-cancel">Cancel</a>
+        </form>
+
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined") {%>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<%= showConfirmButton %>',
+                timer: '<%= timer %>'
+            })
+            .then(()=> {
+                window.location= '/<%= ruta %>'
+            })
+        </script>
+    <% } %>
+</body>
+</html>

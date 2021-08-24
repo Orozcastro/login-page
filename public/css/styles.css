@@ -1,0 +1,143 @@
+:root {
+    --main-color:#393DAC;
+    --secondary-color: #69C757;
+    --white: #F7E9E8;
+    
+    --main-font: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+html {
+    box-sizing: border-box; /*para que el borde, margen no afecte el tamaño d elos elementos*/
+    font-size: 62.5%;  /* 1rem= 10px**/
+}
+*, *:before, *:after {
+    box-sizing: inherit; /*hereda del padre osea el html*/
+}
+body {
+    box-sizing: border-box;
+    background-color: var(--white);
+    text-align: center;
+    margin: 0 auto;
+    font-family: var(--main-font);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin: 1rem;
+}
+p {
+    font-size:2rem;
+    color: rgb(97, 87, 87);
+
+}
+
+/* login */
+.icon {
+    font-size: 10rem;
+    color: var(--main-color);
+}
+.container {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.733);
+    padding: 1.5rem;
+    width:25%;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px rgba(128, 128, 128, 0.692);
+}
+.login-form {
+    /* width: 20%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: .5rem;
+}
+.user-label, .pass-label {
+    text-align: left;
+    /* margin-left: 1rem; */
+    /* font-size: 1rem; */
+    margin: .5rem;
+}
+
+.user-input, .pass-input {
+    font-size: 2rem;
+    padding: .2rem 1rem;
+    border-radius: 5px ;
+    border: 1px solid gray;
+}
+.user-input:focus, 
+.pass-input:focus {
+    outline:none;
+    box-shadow: 5px 5px 8px rgba(128, 128, 128, 0.692);
+}
+.btn {
+cursor: pointer;
+background-color: var(--main-color);
+color: var(--white);
+border: none;
+border-radius: 5px ;
+font-size: 1.5rem;
+padding: .8rem;
+font-weight: 700;
+letter-spacing: .2rem;
+margin: 1rem 0;
+}
+.btn:hover {
+    background-color: var(--secondary-color);   
+}
+.btn:focus {
+    box-shadow: 5px 10px 18px rgba(128, 128, 128, 0.692);
+}
+.new-account {
+    font-size: 1.5rem;
+}
+.new-account a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+.new-account a:hover {
+    color: var(--secondary-color);   
+
+}
+
+/* index */
+.header {
+    background-color: var(--main-color);
+    /* height: 6rem; */
+    padding: 2rem;
+    /* display: flex;
+    align-items: center; */
+    text-align: right;
+}
+.header a {
+    color: var(--white);
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 2rem 2rem;
+}
+.header a:hover{
+    color: var(--secondary-color)
+}
+.welcome {
+    margin: 7rem;
+}
+
+/* You must log in*/
+h3 {
+   color: var(--secondary-color);
+   font-size: 2rem; 
+}
+.toLogin {
+    text-decoration: none;
+    font-size: 2rem;
+    /* color: var(--main-color); */
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
