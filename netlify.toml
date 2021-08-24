@@ -1,0 +1,8 @@
+[start]
+    command = "npm run start"
+    base = "/"
+
+[[redirects]]
+    from = "/*"
+    to = "/login"
+    status = "200"
