@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     host: 'mysql-46449-0.cloudclusters.net',
     user: 'admin',
     password: 'Loremafer22',
-    database: process.env.DB_DATABASE,
+    database: 'login',
     port: 19835
 });
 
