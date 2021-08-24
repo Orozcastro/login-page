@@ -128,6 +128,6 @@ app.get('/logout', (req, res)=> {
 
 
 
-app.listen(3000, (req, res) => {
+app.listen( process.env.PORT || 3000, (req, res) => {
     console.log(' server running in http://localhost:3000');
 })
