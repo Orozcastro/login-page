@@ -73,7 +73,7 @@ app.post('/auth', async (req,res) => {
     const pass = req.body.pass;
     let passwordHaash = await bcryptjs.hash(pass, 8);
     if(user && pass){
-        connection.query('SELECT * FROM users WHERE user =?', [user], async (error, results)=>{
+        connection.query('SELECT * FROM login.users WHERE user =?', [user], async (error, results)=>{
             if(results.length == 0 || !(await bcryptjs.compare(pass, results[0].pass))){
                 res.render("login", {
                   alert: true,
